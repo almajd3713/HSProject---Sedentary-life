@@ -2,8 +2,9 @@
   "name": "sedentary-life",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
+    "start": "node server.js",
     "build": "nodemon server.js"
   },
   "keywords": [],
