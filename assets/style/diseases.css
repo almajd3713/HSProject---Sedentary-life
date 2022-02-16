@@ -3,7 +3,8 @@
   width: 70%;
   margin: auto;
   display: grid;
-  grid-template: 1fr 1fr min-content/ 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 4rem;
   gap: 2rem 8rem;
 }
 
@@ -14,10 +15,10 @@
   flex-direction: column;
   border-radius: 2rem;
   overflow: hidden;
-  transition: all .3s;
+  transition: all .4s;
 }
 .diseaseBox:hover {
-  transform: translateZ(0) translateY(-10px);
+  transform: translateY(-1rem) translateZ(0) !important;
   box-shadow: 0 2rem 3rem black;
 }
 

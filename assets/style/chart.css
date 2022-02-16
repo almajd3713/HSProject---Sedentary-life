@@ -9,5 +9,13 @@
   margin: auto;
   background-color: #f4beff;
   position: relative;
-  height: 30rem
+  height: 30rem;
+  animation: chartFloat 2.5s alternate infinite cubic-bezier(0.37, 0, 0.63, 1);
+}
+
+@keyframes chartFloat {
+  100% {
+    transform: translateY(-1rem) translateZ(0);
+    box-shadow: 0 2rem 3rem black;
+  }
 }

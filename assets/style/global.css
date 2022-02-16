@@ -10,3 +10,12 @@ body {
   width: 95%;
   margin: auto;
 }
+
+.sectionHeader {
+  width: 80%;
+  margin: 4rem auto;
+  font-size: 3rem;
+  color: white;
+  font-weight: 100;
+  text-align: center;
+}

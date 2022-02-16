@@ -23,12 +23,15 @@ function createNode(props) {
 export default () => {
   let isStarted = false;
   let phases = {
+    phase0: false,
     phase1: false,
     phase2: false,
     phase3: false,
     phase4: false,
-    phase5: false
+    phase5: false,
+    phase6: false
   }
+  let subCount = 0
   let playCheckbox = document.querySelector("#startBtn")
   let recording = new Audio("../audio/test.mp3")
   let volumeRange = document.querySelector("#volume")
@@ -36,7 +39,9 @@ export default () => {
   playCheckbox.addEventListener("change", e => {
     if(!isStarted) {
       isStarted = true
-      recording.play()
+      setTimeout(() => {
+        recording.play()
+      }, 500);
       document.querySelector("[name=play]").setAttribute("name", "pause")
     } else {
       if(recording.paused) {
@@ -50,26 +55,108 @@ export default () => {
     }
   })
   recording.addEventListener("timeupdate", e => {
-    if(recording.currentTime >= 0 && !phases.phase1) {
+    if (recording.currentTime >= 1 && !phases.phase0) {
       eventInit()
+      phases.phase0 = true
+    }
+    else if(recording.currentTime >= 3 && !phases.phase1) {
       phaseFade(phase1)
       phases.phase1 = true
     }
-    else if(recording.currentTime >= 10 && !phases.phase2) {
+    else if(recording.currentTime >= 22 && !phases.phase2) {
       phaseFade(phase2, true)
       phases.phase2 = true
     }
-    else if (recording.currentTime >= 20 && !phases.phase3) {
+    else if (recording.currentTime >= 35 && !phases.phase3) {
       phaseFade(phase3, true)
       phases.phase3 = true
     }
-    else if (recording.currentTime >= 30 && !phases.phase4) {
+    else if (recording.currentTime >= 71 && !phases.phase4) {
       phaseFade(phase4, true)
       phases.phase4 = true
     }
-    else if (recording.currentTime >= 40 && !phases.phase5) {
+    else if (recording.currentTime >= 85 && !phases.phase5) {
       phaseFade(phase5, true)
       phases.phase5 = true
+    }
+    else if (recording.currentTime >= 114 && !phases.phase6) {
+      phaseFade(phase6, true)
+      phases.phase6 = true
+      document.querySelector(".volumeBox").style.transform = "translateY(0)"
+      document.querySelector(".subsBox").style.transform = "translateY(0)"
+      document.querySelector(".control").style.opacity = 0
+    }
+  })
+
+  recording.addEventListener("timeupdate", e => {
+    let time = recording.currentTime
+    if(time >= 0 && subCount === 0) {
+      subChanger("Hello there everyone !")
+      subCount ++
+    }
+    else if (time >= 2.5 && subCount === 1) {
+      subChanger("today, we are going to introduce you to the")
+      subCount++
+    }
+    else if (time >= 5 && subCount === 2) {
+      subChanger("Alwarqa Big challenge ! but before we start")
+      subCount++
+    }
+    else if (time >= 8 && subCount === 3) {
+      subChanger("Make sure to adjust your volume to your liking")
+      subCount++
+    }
+    else if (time >= 11 && subCount === 4) {
+      subChanger("and remember that you can pause in any moment !")
+      subCount++
+    }
+    else if (time >= 14 && subCount === 5) {
+      subChanger("Okay so, the Alwarqa big challenge is an exciting")
+      subCount++
+    }
+    else if (time >= 18 && subCount === 6) {
+      subChanger("race organized by the Al Warqah team, and it's really")
+      subCount++
+    }
+    else if (time >= 21.75 && subCount === 7) {
+      subChanger("not an event that you would want to miss out !")
+      subCount++
+    }
+    else if (time >= 24 && subCount === 8) {
+      subChanger("This event shall take place in the Al Warqah park")
+      subCount++
+    }
+    else if (time >= 26.5 && subCount === 9) {
+      subChanger("in the heart of Sharjah, and the competition will")
+      subCount++
+    }
+    else if (time >= 30 && subCount === 10) {
+      subChanger("be held on the 19th of March of this year, 2022,")
+      subCount++
+    }
+    else if (time >= 34 && subCount === 11) {
+      subChanger("so it's quite close !")
+      subCount++
+    }
+    else if (time >= 35.5 && subCount === 12) {
+      subChanger("Essentialy, it's a relay race, which means that")
+      subCount++
+    }
+    else if (time >= 6 && subCount === 1) {
+      subChanger("today, we are going to introduce you to the")
+      subCount++
+    }
+    else if (time >= 6 && subCount === 1) {
+      subChanger("today, we are going to introduce you to the")
+      subCount++
+    }
+    else if (time >= 6 && subCount === 1) {
+      subChanger("today, we are going to introduce you to the")
+      subCount++
+    }
+    else if (time >= 6 && subCount === 1) {
+      subChanger("today, we are going to introduce you to the")
+      subCount++
     }
   })
 
@@ -78,8 +165,13 @@ export default () => {
   })
 }
 
+let subChanger = (newSub) => {
+  document.querySelector(".subsBox").textContent = newSub
+}
+
 let eventInit = () => {
   document.querySelector(".volumeBox").style.transform = "translateY(-100%)"
+  document.querySelector(".subsBox").style.transform = "translateY(-100%)"
   document.querySelector(".eventHeading").style.opacity = 0
   setTimeout(() => {
     document.querySelector(".eventHeading").remove()
@@ -87,6 +179,7 @@ let eventInit = () => {
   document.querySelector(".control").style.top = "-2.25rem"
   document.querySelector(".control").style.left = "9rem"
   document.querySelector(".volumeControl").style.opacity = 1
+  document.querySelector(".subsBox").style.opacity = 1
 }
 
 let phaseFade = (nextPhase, currentPhase) => {
@@ -200,7 +293,12 @@ let phase5 = createNode({
       textContent: '<span class="titleColor silver">2nd:</span> 3000 AED'
     }, {
       className: "eventDescription",
-      textContent: '<span class="titleColor bronze">2nd:</span> 2000 AED'
+      textContent: '<span class="titleColor bronze">3rd:</span> 2000 AED'
     }
   ]
+})
+
+let phase6 = createNode({
+  textContent: "Are you up for the challenge ?",
+  className: "eventHeading"
 })
