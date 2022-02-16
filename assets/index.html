@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js' integrity='sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==' crossorigin='anonymous'></script>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css' integrity='sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==' crossorigin='anonymous'/>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js' integrity='sha512-TW5s0IT/IppJtu76UbysrBH9Hy/5X41OTAbQuffZFU6lQ1rdcLHzpU5BzVvr/YFykoiMYZVWlr/PX1mDcfM9Qg==' crossorigin='anonymous'></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +13,107 @@
   <link rel="stylesheet" href="/style/index.css">
 </head>
 <body>
-  Hello theree !
+  
+  <div class="container">
+    <header>
+      <div class="title">Sedentary Life</div>
+      <div class="desc">Definitions and Solutions</div>
+    </header>
+  </div>
 
-  <script src="/scripts/index.js"></script>
+  <section class="about" data-aos="fade-right" data-aos-duration="1500">
+    <div class="box-container">
+      <img src="./pics/sedentary-lifestyle.jpg" alt="">
+      <div class="content">
+        <h2>The Definition</h2>
+        <p>A sedentary lifestyle is one that involves very little or no physical exercise, wherein most of the day is spent
+        sitting, lying down and expending very little energy. This type of lifestyle has increased dramatically over the past
+        few decades as a result of an increase in office jobs that involve sitting, as well as an increase in commute times and
+        screen time while off the job.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="chart" >
+    <div class="chart-container" data-aos="fade-left">
+      <canvas id="myChart"></canvas>
+    </div>
+  </section>
+
+  <div class="diseases">
+    <div class="diseaseBox" data-aos="fade-right">
+      <img src="./pics/cardiovascular-disease.jpg" alt="">
+      <p>Cardiovascular Disease</p>
+    </div>
+    <div class="diseaseBox" data-aos="fade-left">
+      <img src="./pics/diabetes.jpg" alt="">
+      <p>Type 2 Diabetes</p>
+    </div>
+    <div class="diseaseBox" data-aos="fade-right">
+      <img src="./pics/stress.jpg" alt="">
+      <p>Chronic Sterss</p>
+    </div>
+    <div class="diseaseBox" data-aos="fade-left">
+      <img src="./pics/depression.jpg" alt="">
+      <p>Depression</p>
+    </div>
+  </div>
+
+  <div class="benefits">
+    <div class="benefitBox">
+      <div class="front">
+        <img src="./pics/confidence.jpg" alt="">
+        <h2 class="benefitHeading">Confidence</h2>
+      </div>
+      <div class="back">
+        Doing physical activity tends to improve our body's image. This is a very big factor for self-confidence, as most people tend not to be confident when their image isn't as they like it to.</div>
+    </div>
+    <div class="benefitBox">
+      <div class="front">
+        <img src="./pics/leadership.png" alt="">
+        <h2 class="benefitHeading">Leadership</h2>
+      </div>
+      <div class="back">
+        People who do physical exercise tend to do better when handling leadership positions, as more stress that such positions cause would dissipate with these activities. It also allows for creativity to flourish, which is a requirement for being a leader.
+      </div>
+    </div>
+    <div class="benefitBox">
+      <div class="front">
+        <img src="./pics/Happiness_hero_1_v21.jpg" alt="">
+        <h2 class="benefitHeading">Happiness</h2>
+      </div>
+      <div class="back">
+        The American Psychiatric Association confirmed that physical activity is an effective treatment for depression. It also produces the "happiness" hormones, which lifts up the mood and makes the person happy.
+      </div>
+    </div>
+  </div>
+
+  <div class="event">
+    <div class="volumeBox"></div>
+    <div class="eventHeading">
+      Now that we've learned about how good is physical activity, let's start to engage in it !
+    </div>
+    <div class="eventContainer">
+    </div>
+
+    <div class="control">
+      <input type="checkbox" id="startBtn">
+      <label for="startBtn" class="startButton">
+        <ion-icon name="play"></ion-icon>
+      </label>
+      <div class="volumeControl">
+        <ion-icon name="volume-high"></ion-icon>
+        <input type="range" id="volume" value="100">
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <script src="/scripts/index.js" type="module"></script>
+  <script>
+    AOS.init()
+  </script>
 </body>
 </html>

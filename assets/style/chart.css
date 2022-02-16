@@ -1,0 +1,13 @@
+
+.chart {
+  height: 40rem;
+}
+
+.chart-container {
+  width: 60%;
+  padding-top: 2rem;
+  margin: auto;
+  background-color: #f4beff;
+  position: relative;
+  height: 30rem
+}

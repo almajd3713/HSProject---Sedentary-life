@@ -1,4 +1,11 @@
 
-html {
-  color: yellow
-}
+@import "./reset.css";
+@import "./global.css";
+@import "./header.css";
+@import "./about.css";
+@import "./chart.css";
+@import "./diseases.css";
+@import "./benefits.css";
+@import "./event.css";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+

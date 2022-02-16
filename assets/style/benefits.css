@@ -1,0 +1,48 @@
+
+.benefits {
+  width: 90%;
+  margin: 10rem auto;
+  height: 20rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1rem 2rem;
+  overflow: hidden;
+}
+
+.benefitBox {
+  display: flex;
+  text-align: center;
+  background-color: antiquewhite;
+  overflow: hidden;
+  position: relative;
+}
+
+.benefitBox img {
+  width: 100%;
+}
+
+.benefitBox .benefitHeading {
+  font-size: 2rem;
+  margin-top: .75rem;
+}
+
+.benefitBox .front {
+  transition: all .4s;
+}
+
+.benefitBox .back {
+  position: absolute;
+  top: 20rem;
+  padding: 4rem 2rem 0 2rem;
+  line-height: 1.5rem;
+  font-size: 1.25rem;
+  background-color: #ffffffba;
+  height: 100%;
+  transition: all .4s;
+}
+.benefitBox:hover .front {
+  filter: blur(1rem);
+}
+.benefitBox:hover .back {
+  top: 0
+}

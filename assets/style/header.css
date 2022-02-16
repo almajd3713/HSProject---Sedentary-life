@@ -1,0 +1,28 @@
+
+header {
+  height: 100vh;
+  text-align: center;
+  padding-top: 35vh;
+  opacity: 0;
+  animation: fadein 2s 1s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards;
+}
+
+header .title {
+  font-size: 7rem;
+  font-weight: 100;
+  color: #cccccc;
+  text-shadow: 0 1rem 2rem rgb(0, 0, 0);
+  margin-bottom: 2rem;
+}
+
+header .desc {
+  font-size: 2.5rem;
+  font-weight: 100;
+  color: #aaa
+}
+
+@keyframes fadein {
+  100% {
+    opacity: 1;
+  }
+}

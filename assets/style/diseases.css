@@ -1,0 +1,32 @@
+
+.diseases {
+  width: 70%;
+  margin: auto;
+  display: grid;
+  grid-template: 1fr 1fr min-content/ 1fr 1fr;
+  gap: 2rem 8rem;
+}
+
+.diseaseBox {
+  text-align: center;
+  background-color: pink;
+  display: flex;
+  flex-direction: column;
+  border-radius: 2rem;
+  overflow: hidden;
+  transition: all .3s;
+}
+.diseaseBox:hover {
+  transform: translateZ(0) translateY(-10px);
+  box-shadow: 0 2rem 3rem black;
+}
+
+.diseaseBox img {
+  width: 100%;
+}
+
+.diseaseBox p {
+  font-size: 2rem;
+  font-weight: 100;
+  padding: 1rem 0
+}

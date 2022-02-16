@@ -1,0 +1,41 @@
+
+.about {
+  height: 40rem;
+}
+
+.about img {
+  width: 40%;
+  display: inline-block;
+}
+
+.about .box-container {
+  width: 70%;
+  height: 20rem;
+  background-color: red;
+  display: flex;
+  margin:auto;
+  transition: all .3s;
+
+}
+
+.about .box-container .content {
+  padding: 2rem;
+  width: 60%;
+  background-color: #9b47e9;
+}
+.about .box-container:hover {
+  transform: translateY(-9px);
+  box-shadow: 0 2rem 3rem black
+}
+
+.content h2 {
+  font-size:2rem;
+  font-weight: 100;
+  margin-bottom: 1rem;
+}
+
+.content p {
+  color: #95e947;
+  line-height: 1.75rem;
+  font-size: 1.25rem;
+}

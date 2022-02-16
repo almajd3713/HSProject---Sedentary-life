@@ -1,0 +1,12 @@
+html {
+  font-family: "Roboto";
+}
+
+body {
+  background-color: #1a0033;
+}
+
+.container {
+  width: 95%;
+  margin: auto;
+}
