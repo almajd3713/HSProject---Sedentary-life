@@ -2,7 +2,7 @@
 .benefits {
   width: 90%;
   margin: 5rem auto;
-  height: 20rem;
+  height: 22rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 1rem 2rem;
@@ -32,7 +32,7 @@
 
 .benefitBox .back {
   position: absolute;
-  top: 20rem;
+  top: 100%;
   padding: 4rem 2rem 0 2rem;
   line-height: 1.5rem;
   font-size: 1.25rem;
