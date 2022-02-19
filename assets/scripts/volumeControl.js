@@ -79,7 +79,7 @@ export default () => {
       phaseFade(phase5, true)
       phases.phase5 = true
     }
-    else if (recording.currentTime >= 114 && !phases.phase6) {
+    else if (recording.currentTime >= 117 && !phases.phase6) {
       phaseFade(phase6, true)
       phases.phase6 = true
       document.querySelector(".volumeBox").style.transform = "translateY(0)"
@@ -142,20 +142,109 @@ export default () => {
       subChanger("Essentialy, it's a relay race, which means that")
       subCount++
     }
-    else if (time >= 6 && subCount === 1) {
-      subChanger("today, we are going to introduce you to the")
+    else if (time >= 39.75 && subCount === 13) {
+      subChanger("it involves teams of people taking turns in")
       subCount++
     }
-    else if (time >= 6 && subCount === 1) {
-      subChanger("today, we are going to introduce you to the")
+    else if (time >= 42.30 && subCount === 14) {
+      subChanger("completing parts of the race until one has finished")
       subCount++
     }
-    else if (time >= 6 && subCount === 1) {
-      subChanger("today, we are going to introduce you to the")
+    else if (time >= 45.5 && subCount === 15) {
+      subChanger("first. It's a golden opportunity for you and")
       subCount++
     }
-    else if (time >= 6 && subCount === 1) {
-      subChanger("today, we are going to introduce you to the")
+    else if (time >= 48.75 && subCount === 16) {
+      subChanger("your friends to compete and cooperate together !")
+      subCount++
+    }
+    else if (time >= 51.5 && subCount === 17) {
+      subChanger("And even if you have none, you surely will be")
+      subCount++
+    }
+    else if (time >= 54.5 && subCount === 18) {
+      subChanger("able to make new friends during the race !")
+      subCount++
+    }
+    else if (time >= 58 && subCount === 19) {
+      subChanger("The distance is certainly a long one, estimated")
+      subCount++
+    }
+    else if (time >= 60.5 && subCount === 20) {
+      subChanger("to be 12 kilometers long, split into")
+      subCount++
+    }
+    else if (time >= 63.5 && subCount === 21) {
+      subChanger("four laps, with three kilometers for each. It's")
+      subCount++
+    }
+    else if (time >= 67.1 && subCount === 22) {
+      subChanger("quite the long one, but it only means that it'll")
+      subCount+=6
+      // because i did an oopsie and will take a few minutes to fix which am not willing to spend lmao
+    }
+    else if (time >= 69.5 && subCount === 28) {
+      subChanger("be a true test for your power and abilites !")
+      subCount++
+    }
+    else if (time >= 73.1 && subCount === 29) {
+      subChanger("Regarding the age of the participants, they can")
+      subCount++
+    }
+    else if (time >= 75.5 && subCount === 30) {
+      subChanger("only be 18 years or older, but there are no other")
+      subCount++
+    }
+    else if (time >= 79 && subCount === 31) {
+      subChanger("restrictions ! so whether you would bring your")
+      subCount++
+    }
+    else if (time >= 81.3 && subCount === 32) {
+      subChanger("siblings, your parents, your friends, they are all welcome!")
+      subCount++
+    }
+    else if (time >= 86.5 && subCount === 33) {
+      subChanger("And now for the great part ! the prizes for the")
+      subCount++
+    }
+    else if (time >= 89.75 && subCount === 34) {
+      subChanger("first three places are amazing, with the first")
+      subCount++
+    }
+    else if (time >= 92.6 && subCount === 35) {
+      subChanger("winner leaving with a staggering five thousand")
+      subCount++
+    }
+    else if (time >= 95.15 && subCount === 36) {
+      subChanger("Dirhams ! even the second and third places will")
+      subCount++
+    }
+    else if (time >= 98.15 && subCount === 37) {
+      subChanger("get a veeeery genirous prizes, three thousand and")
+      subCount++
+    }
+    else if (time >= 101.6 && subCount === 38) {
+      subChanger("two thousand dirhams, so you really want to secure")
+      subCount++
+    }
+    else if (time >= 104.75 && subCount === 39) {
+      subChanger("these prizes right ?")
+      subCount++
+    }
+    else if (time >= 107 && subCount === 40) {
+      subChanger("Even if you didn't, the race itself will set a big")
+      subCount++
+    }
+    else if (time >= 110 && subCount === 41) {
+      subChanger("goal for you to work towards, and it will be a unique")
+      subCount++
+    }
+    else if (time >= 113.5 && subCount === 42) {
+      subChanger("experience for you to test out your abilites")
+      subCount++
+    }
+    else if (time >= 115.6 && subCount === 43) {
+      subChanger("So")
       subCount++
     }
   })
